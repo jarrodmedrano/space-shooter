@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
     //public or private reference
     //data type (int, float, bool, string)
     //f stands for float
-    public float speed = 3.5f;
+    [SerializeField]
+    private float speed = 3.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * 5 * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
 
     }
 }
